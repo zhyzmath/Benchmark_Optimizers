@@ -5,27 +5,27 @@ This repository compares a set of modern optimizers on several synthetic matrix 
 ### Optimization tasks covered
 
 - **Linear regression with SPD preconditioning**:  
-  $
+  ```math
   L(X) = (X - X_*)^T H (X - X_*)
-  $
+  ```
   Function: `linear_regression_loss(X, X_star, H)`
 
 - **Low-rank matrix completion (masked Frobenius)**:  
-  $$
+  ```math
   L(X, Y) = \frac{\|A \odot (X Y^T - M_*)\|_F^2}{\|A\|_F^2}
-  $$
+  ```
   Function: `lowrank_matrix_completion_loss(X, Y, A_mask, M_star)`
 
 - **Low-rank matrix completion with nuclear-norm residual**:  
-  $$
+  ```math
   L(X, Y) = \frac{\|A \odot (X Y^T - M_*)\|_{\mathrm{nuc}}^2}{\|A\|_{\mathrm{nuc}}^2}
-  $$
+  ```
   Function: `lowrank_matrix_completion_loss_with_nuc_norm(X, Y, A_mask, M_star)`
 
 - **Matrix quadratic regression**:  
-  $$
+  ```math
   L(X) = \frac{1}{2} \|A X B - C\|_F^2
-  $$
+  ```
   Function: `matrix_quadratic_regression_loss(X, A, B, C)`
 
 
