@@ -5,9 +5,9 @@ This repository compares a set of modern optimizers on several synthetic matrix 
 ### Optimization tasks covered
 
 - **Linear regression with SPD preconditioning**:  
-  $$
+  $
   L(X) = (X - X_*)^T H (X - X_*)
-  $$
+  $
   Function: `linear_regression_loss(X, X_star, H)`
 
 - **Low-rank matrix completion (masked Frobenius)**:  
